@@ -1,6 +1,7 @@
 import { JoinColumn, Entity, Column, PrimaryColumn, PrimaryGeneratedColumn, OneToMany, ManyToOne, Generated } from "typeorm";
 import { AbstractEntity } from "./abstract.entity";
 import { Department } from "./department.entity";
+import { Salary } from "./salary.entity";
 
 @Entity({ name: "employee" })
 export class Employee extends AbstractEntity {
@@ -39,6 +40,10 @@ export class Employee extends AbstractEntity {
     @ManyToOne(type => Department, department => department.id)
     @JoinColumn({ name: "department_id" })
     department: Department;
+
+    @OneToMany(type => Salary, salary => salary.employee)
+    @JoinColumn({ name: "" })
+    salaryCollection: Salary[];
 
     @Column({ name: "is_active", primary: false, nullable: false })
     isActive: number;

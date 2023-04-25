@@ -110,10 +110,10 @@ export class BaseController {
 
   setError(code: any, errorDescription: any, res: Response) {
     console.log(errorDescription);
-    res.status(code).json({ status: false, error: "Request Failed" });
+    res.status(code).json({ isSuccess: false, error: "Request Failed" });
   }
   setSuccess(code: any, payload: any, res: Response) {
-    res.status(code).json({ status: true, data: payload });
+    res.status(code).json({ isSuccess: true, payload: payload });
   }
   evaluateAndSendResult(dataTaskResult: DataTaskResult, response: Response) {
     if(dataTaskResult.isSuccess) {
