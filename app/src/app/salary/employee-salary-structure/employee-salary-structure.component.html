@@ -1,1 +1,14 @@
-<p>employee-salary-structure works!</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Components</th>
+            <th scope="col">Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let component of salaryBreakup;">
+            <td>{{component.name}}</td>
+            <td>{{ salary * (component.percentage /100 )}}</td>
+        </tr>
+    </tbody>
+</table>

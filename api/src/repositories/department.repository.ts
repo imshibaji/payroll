@@ -5,6 +5,7 @@ export const DepartmentRepository = AppDataSource.getRepository(Department).exte
     async getDepartmentWithEmployee() {
         return await this.createQueryBuilder("department")
             .innerJoinAndSelect("department.employeeCollection", "employeeCollection")
+            .innerJoinAndSelect("employeeCollection.salaryCollection", "salaryCollection")
             .getMany();
     }
 });

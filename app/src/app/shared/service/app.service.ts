@@ -10,10 +10,6 @@ export class AppService {
 
     constructor(@Inject(APP_CONFIG) private appConfig: AppConfig, private http: HttpClient) { }
 
-    public getEmployeeList(data: any): Observable<any> {
-        return this.http.post(this.appConfig.apiEndPoint + '/employee/query', data);
-    }
-
     public getDepartmentList(data: any): Observable<any> {
         return this.http.post(this.appConfig.apiEndPoint + '/department/query', data);
     }

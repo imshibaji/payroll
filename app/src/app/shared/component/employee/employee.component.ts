@@ -12,7 +12,7 @@ export class EmployeeComponent implements OnInit {
   constructor(private appService: AppService) { }
 
   ngOnInit(): void {
-    this.appService.getEmployeeList({relations: ["department", "salaryCollection"]}).subscribe(res => {
+    this.appService.getDepartmentWithAssociatedEmployees().subscribe(res => {
       if(res.isSuccess) {
         this.employeeList = res.payload;
       }
