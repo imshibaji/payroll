@@ -35,7 +35,7 @@ CREATE TABLE `salary` (
   CONSTRAINT `fk_employee_salary` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`id`)
 );
 
-INSERT INTO sql12614276.department (id,name,description,is_active) VALUES
+INSERT INTO department (id,name,description,is_active) VALUES
 	 (1,'Operations','Operations',1),
 	 (2,'IT','IT',1),
 	 (3,'Finance','Finance',1),
@@ -43,7 +43,7 @@ INSERT INTO sql12614276.department (id,name,description,is_active) VALUES
 	 (5,'Support','Support',0);
 
 
-     INSERT INTO sql12614276.employee (id,first_name,last_name,email,gender,mobile,address,city,designation,department_id,is_active) VALUES
+     INSERT INTO employee (id,first_name,last_name,email,gender,mobile,address,city,designation,department_id,is_active) VALUES
 	 (1,'Cearic','Florentine','cflorentine@yahoo.com','Male','9964551698','1333, Superior Plazza','Gordeyevka','Manager',1,1),
 	 (2,'Hilliard','Faragan','hfaragan@gmail.com','Male','99345519833','87, Holy Cross Hill','Mersam','Developer',2,0),
 	 (3,'Martita','Townson','mtownson@gmail.com','Female','9946677086','53293 Cardinal Way','Pillar','Lead',4,0),
@@ -57,43 +57,43 @@ INSERT INTO sql12614276.department (id,name,description,is_active) VALUES
 
 
 
-INSERT INTO sql12614276.salary
+INSERT INTO salary
 (employee_id, salary, is_active)
 VALUES(1, 105000, 1);
 
-INSERT INTO sql12614276.salary
+INSERT INTO salary
 (employee_id, salary, is_active)
 VALUES(2, 52000, 1);
 
-INSERT INTO sql12614276.salary
+INSERT INTO salary
 (employee_id, salary, is_active)
 VALUES(3, 73500, 1);
 
-INSERT INTO sql12614276.salary
+INSERT INTO salary
 (employee_id, salary, is_active)
-VALUES(4, 35000, 1);
+VALUES(4, 35000, 0);
 
-INSERT INTO sql12614276.salary
+INSERT INTO salary
 (employee_id, salary, is_active)
 VALUES(5, 120000, 1);
 
-INSERT INTO sql12614276.salary
+INSERT INTO salary
 (employee_id, salary, is_active)
 VALUES(6, 95000, 1);
 
-INSERT INTO sql12614276.salary
+INSERT INTO salary
 (employee_id, salary, is_active)
 VALUES(7, 98000, 1);
 
-INSERT INTO sql12614276.salary
+INSERT INTO salary
 (employee_id, salary, is_active)
 VALUES(8, 100500, 1);
 
-INSERT INTO sql12614276.salary
+INSERT INTO salary
 (employee_id, salary, is_active)
 VALUES(9, 64050, 1);
 
-INSERT INTO sql12614276.salary
+INSERT INTO salary
 (employee_id, salary, is_active)
 VALUES(10, 86000, 1);
 
