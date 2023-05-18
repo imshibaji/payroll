@@ -6,11 +6,11 @@ import { Salary } from "./entities/salary.entity"
 
 export const AppDataSource = new DataSource({
     type: "mysql",
-    host: "sql12.freemysqlhosting.net",
-    port: 3306,
-    username: "sql12616806",
-    password: "7fqZKb5kEY",
-    database: "sql12616806",
+    host: "13.127.53.166",
+    port: 5500,
+    username: "payrollreadonly",
+    password: "Husjd@48173@dJ##",
+    database: "payroll",
     synchronize: false,
     logging: false, 
     entities: [Department, Employee, Salary],
