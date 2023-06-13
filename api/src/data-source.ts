@@ -6,7 +6,7 @@ import { Salary } from "./entities/salary.entity"
 
 export const AppDataSource = new DataSource({
     type: "mysql",
-    host: "13.127.53.166",
+    host: "13.234.46.147",
     port: 5500,
     username: "payrollreadonly",
     password: "Husjd@48173@dJ##",
