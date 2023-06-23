@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Email Domain</th>
+                    <th scope="col">count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let domain of popularEmailDomain | keyvalue; let i = index;">
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{domain.key}}</td>
+                    <td>{{getLength(domain.value)}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

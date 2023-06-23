@@ -2,15 +2,18 @@
     <mat-tab label="Department">
         <div class="row">
             <div class="col-md-12">
-                <app-department></app-department>
+                <app-departments [departmentList]="departmentList"></app-departments>
             </div>
         </div>
     </mat-tab>
     <mat-tab label="Employee">
         <div class="row">
             <div class="col-md-12">
-                <app-employee></app-employee>
+                <app-employee-by-departments [employeeList]="employeeList"></app-employee-by-departments>
             </div>
         </div>
+    </mat-tab>
+    <mat-tab label="Most Popular Email Domain">
+        <app-email-domain [popularEmailDomain]="popularEmailDomain"></app-email-domain>
     </mat-tab>
 </mat-tab-group>

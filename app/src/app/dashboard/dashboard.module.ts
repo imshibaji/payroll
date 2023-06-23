@@ -5,6 +5,11 @@ import 'hammerjs';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { DepartmentsComponent } from './departments/departments.component';
+import { EmployeeByDepartmentsComponent } from './employee-by-departments/employee-by-departments.component';
+import { SalaryModule } from '../salary/salary.module';
+import { ActiveEmpPipe } from './active-emp.pipe';
+import { EmailDomainComponent } from './email-domain/email-domain.component';
 
 
 const routes: Routes = [
@@ -16,13 +21,18 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    DepartmentsComponent,
+    EmployeeByDepartmentsComponent,
+    ActiveEmpPipe,
+    EmailDomainComponent
   ],
   imports: [
     CommonModule,
     MatTabsModule,
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
+    SalaryModule
   ]
 })
 export class DashboardModule { }
